@@ -9,7 +9,7 @@ declare global {
   }
   
   interface Window {
-    api: {
+    electron: {
       main: () => void;
       preload: () => void;
     }
