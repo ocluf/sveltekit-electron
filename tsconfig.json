@@ -1,0 +1,23 @@
+{
+  "extends": ["@electron-toolkit/tsconfig/tsconfig.json"], //"./.svelte-kit/tsconfig.json"
+  "include": [
+    "src/env.d.ts",
+    "src/**/*",
+    "src/**/*.svelte",
+    "electron/preload/*.d.ts"
+  ],
+  "compilerOptions": {
+    "verbatimModuleSyntax": true,
+    "useDefineForClassFields": true,
+    "allowJs": true,
+    "checkJs": true,
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"strict": true
+  },
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
