@@ -41,6 +41,7 @@
 		"@types/node": "^22.10.1",
 		"@typescript-eslint/eslint-plugin": "^8.17.0",
 		"@typescript-eslint/parser": "^8.17.0",
+		"clsx": "^2.1.1",
 		"electron": "^33.2.1",
 		"electron-builder": "^25.1.8",
 		"electron-vite": "^2.3.0",
@@ -53,6 +54,9 @@
 		"svelte": "^5.7.1",
 		"svelte-check": "^4.1.1",
 		"svelte-preprocess": "^6.0.3",
+		"tailwind-merge": "^2.5.5",
+		"tailwind-variants": "^0.3.0",
+		"tailwindcss-animate": "^1.0.7",
 		"tslib": "^2.8.1",
 		"typescript": "^5.7.2",
 		"vite": "^6.0.3"
