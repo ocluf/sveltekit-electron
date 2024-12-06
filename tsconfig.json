@@ -1,5 +1,5 @@
 {
-  "extends": ["@electron-toolkit/tsconfig/tsconfig.json"], //"./.svelte-kit/tsconfig.json"
+  "extends": ["@electron-toolkit/tsconfig/tsconfig.json",  "./.svelte-kit/tsconfig.json"],
   "include": [
     "src/env.d.ts",
     "src/**/*",

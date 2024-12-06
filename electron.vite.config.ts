@@ -25,7 +25,7 @@ const config = defineConfig({
 		}
 	},
 	renderer: {
-		plugins: [tailwindcss(), sveltekit()],
+		plugins: [sveltekit(), tailwindcss()],
 		resolve: {
 			alias: {
 				'@renderer': resolve('src')
