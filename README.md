@@ -1,10 +1,13 @@
 # sveltekit-electron
 
-An Electron application with Svelte and TypeScript
+An Electron application with Sveltekit, TypeScript, and tailwindcss v4
 
-## Recommended IDE Setup
+## Notes
 
-- [VSCode](https://code.visualstudio.com/) + [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) + [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- Uses svelte static adapter to generate static HTML/JS files
+- Uses electron-serve to serve the static web assets as sveltekit does not play nice with file:// urls 
+- uses ESM imports where possible
+
 
 ## Project Setup
 
@@ -21,6 +24,8 @@ $ pnpm dev
 ```
 
 ### Build
+
+Note: only been tested on Macos without notarization
 
 ```bash
 # For windows
