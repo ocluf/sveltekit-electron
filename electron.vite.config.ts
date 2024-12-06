@@ -1,6 +1,6 @@
 import { defineConfig, externalizeDepsPlugin } from 'electron-vite';
-// import { svelte } from '@sveltejs/vite-plugin-svelte'
 import { sveltekit } from '@sveltejs/kit/vite';
+import tailwindcss from '@tailwindcss/vite';
 import { resolve } from 'path';
 
 const config = defineConfig({
@@ -25,7 +25,7 @@ const config = defineConfig({
 		}
 	},
 	renderer: {
-		plugins: [sveltekit()],
+		plugins: [tailwindcss(), sveltekit()],
 		resolve: {
 			alias: {
 				'@renderer': resolve('src')
