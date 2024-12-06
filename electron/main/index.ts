@@ -20,14 +20,13 @@ async function createWindow(): Promise<void> {
 		webPreferences: {
 			preload: join(__dirname, '../preload/index.cjs'),
 			sandbox: true,
-			contextIsolation: true,
+			contextIsolation: true
 		}
 	});
 
 	// Load the remote URL for development or the local html file for production.
 	if (is.dev && process.env['ELECTRON_RENDERER_URL']) {
-			await mainWindow.loadURL(process.env['ELECTRON_RENDERER_URL']);
-			mainWindow.webContents.openDevTools();
+		await mainWindow.loadURL(process.env['ELECTRON_RENDERER_URL']);
 	} else {
 		await loadURL(mainWindow);
 	}
@@ -73,9 +72,8 @@ async function main() {
 		});
 
 		ipcMain.handle('main-function', () => {
-			console.log('Function called from main context with main privileges')
-		})
-
+			console.log('Function called from main context with main privileges');
+		});
 	} catch (error) {
 		console.error('Failed to initialize app:', error);
 		app.quit();

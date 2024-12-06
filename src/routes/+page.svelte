@@ -4,7 +4,11 @@
 	 * to learn more about preload context, see https://www.electronjs.org/docs/latest/tutorial/tutorial-preload
 	 */
 	function logFromPreload() {
-		window.electron.preload();
+		if (window.electron) {
+			window.electron.preload();
+		} else {
+			// you could implement alternative logic here if you deployed your app as website. For example call a rest api
+		}
 	}
 
 	/**
@@ -12,7 +16,11 @@
 	 * to learn more about main process, see https://www.electronjs.org/docs/latest/api/context-bridge
 	 */
 	function logFromMain() {
-		window.electron.main();
+		if (window.electron) {
+			window.electron.main();
+		} else {
+			// you could implement alternative logic here if you deployed your app as website. For example call a rest api
+		}
 	}
 </script>
 
