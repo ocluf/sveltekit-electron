@@ -7,6 +7,13 @@ declare global {
     // interface PageData {}
     // interface Platform {}
   }
+  
+  interface Window {
+    api: {
+      main: () => void;
+      preload: () => void;
+    }
+  }
 }
 
 export {}

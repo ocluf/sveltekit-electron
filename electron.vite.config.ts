@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { defineConfig, externalizeDepsPlugin } from 'electron-vite';
 import { sveltekit } from '@sveltejs/kit/vite';
 import tailwindcss from '@tailwindcss/vite';
@@ -9,7 +10,7 @@ const config = defineConfig({
 		build: {
 			outDir: 'out/electron/main',
 			lib: {
-				formats: ['cjs'],
+				formats: ['es'],
 				entry: './electron/main/index.ts'
 			}
 		}
@@ -36,5 +37,4 @@ const config = defineConfig({
 		}
 	}
 });
-
 export default config;

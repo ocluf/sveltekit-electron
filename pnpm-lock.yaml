@@ -17,6 +17,9 @@ importers:
       '@tailwindcss/vite':
         specifier: 4.0.0-beta.5
         version: 4.0.0-beta.5(vite@6.0.3(@types/node@22.10.1)(jiti@2.4.1)(lightningcss@1.28.2))
+      electron-serve:
+        specifier: ^2.1.1
+        version: 2.1.1
       electron-updater:
         specifier: ^6.3.9
         version: 6.3.9
@@ -36,9 +39,6 @@ importers:
       '@neoconfetti/svelte':
         specifier: ^2.2.1
         version: 2.2.1
-      '@sveltejs/adapter-auto':
-        specifier: ^3.3.1
-        version: 3.3.1(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.7.1)(vite@6.0.3(@types/node@22.10.1)(jiti@2.4.1)(lightningcss@1.28.2)))(svelte@5.7.1)(vite@6.0.3(@types/node@22.10.1)(jiti@2.4.1)(lightningcss@1.28.2)))
       '@sveltejs/adapter-static':
         specifier: 3.0.6
         version: 3.0.6(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.7.1)(vite@6.0.3(@types/node@22.10.1)(jiti@2.4.1)(lightningcss@1.28.2)))(svelte@5.7.1)(vite@6.0.3(@types/node@22.10.1)(jiti@2.4.1)(lightningcss@1.28.2)))
@@ -765,11 +765,6 @@ packages:
     resolution: {integrity: sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw==}
     engines: {node: '>=10'}
 
-  '@sveltejs/adapter-auto@3.3.1':
-    resolution: {integrity: sha512-5Sc7WAxYdL6q9j/+D0jJKjGREGlfIevDyHSQ2eNETHcB1TKlQWHcAo8AS8H1QdjNvSXpvOwNjykDUHPEAyGgdQ==}
-    peerDependencies:
-      '@sveltejs/kit': ^2.0.0
-
   '@sveltejs/adapter-static@3.0.6':
     resolution: {integrity: sha512-MGJcesnJWj7FxDcB/GbrdYD3q24Uk0PIL4QIX149ku+hlJuj//nxUbb0HxUTpjkecWfHjVveSUnUaQWnPRXlpg==}
     peerDependencies:
@@ -1415,6 +1410,10 @@ packages:
 
   electron-publish@25.1.7:
     resolution: {integrity: sha512-+jbTkR9m39eDBMP4gfbqglDd6UvBC7RLh5Y0MhFSsc6UkGHj9Vj9TWobxevHYMMqmoujL11ZLjfPpMX+Pt6YEg==}
+
+  electron-serve@2.1.1:
+    resolution: {integrity: sha512-SJdA7bfZuPODK9BkXTZ8EPsQlzg6yNSA0H6811DQvqzyDhPP8icIACA0bIA9aWeT+gmDB7V4eMg/wZhR+ijk6w==}
+    engines: {node: '>=18'}
 
   electron-to-chromium@1.5.71:
     resolution: {integrity: sha512-dB68l59BI75W1BUGVTAEJy45CEVuEGy9qPVVQ8pnHyHMn36PLPPoE1mjLH+lo9rKulO3HC2OhbACI/8tCqJBcA==}
@@ -3470,11 +3469,6 @@ snapshots:
 
   '@sindresorhus/is@4.6.0': {}
 
-  '@sveltejs/adapter-auto@3.3.1(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.7.1)(vite@6.0.3(@types/node@22.10.1)(jiti@2.4.1)(lightningcss@1.28.2)))(svelte@5.7.1)(vite@6.0.3(@types/node@22.10.1)(jiti@2.4.1)(lightningcss@1.28.2)))':
-    dependencies:
-      '@sveltejs/kit': 2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.7.1)(vite@6.0.3(@types/node@22.10.1)(jiti@2.4.1)(lightningcss@1.28.2)))(svelte@5.7.1)(vite@6.0.3(@types/node@22.10.1)(jiti@2.4.1)(lightningcss@1.28.2))
-      import-meta-resolve: 4.1.0
-
   '@sveltejs/adapter-static@3.0.6(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.7.1)(vite@6.0.3(@types/node@22.10.1)(jiti@2.4.1)(lightningcss@1.28.2)))(svelte@5.7.1)(vite@6.0.3(@types/node@22.10.1)(jiti@2.4.1)(lightningcss@1.28.2)))':
     dependencies:
       '@sveltejs/kit': 2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.7.1)(vite@6.0.3(@types/node@22.10.1)(jiti@2.4.1)(lightningcss@1.28.2)))(svelte@5.7.1)(vite@6.0.3(@types/node@22.10.1)(jiti@2.4.1)(lightningcss@1.28.2))
@@ -4239,6 +4233,8 @@ snapshots:
       mime: 2.6.0
     transitivePeerDependencies:
       - supports-color
+
+  electron-serve@2.1.1: {}
 
   electron-to-chromium@1.5.71: {}
 

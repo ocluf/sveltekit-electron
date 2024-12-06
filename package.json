@@ -2,6 +2,7 @@
 	"name": "sveltekit-electron",
 	"version": "1.0.0",
 	"description": "An Electron application with Svelte and TypeScript",
+	"type": "module",
 	"main": "./out/electron/main/index.js",
 	"author": "example.com",
 	"homepage": "https://www.electronjs.org",
@@ -13,6 +14,7 @@
 		"dev": "electron-vite dev",
 		"build": "npm run typecheck && electron-vite build",
 		"postinstall": "electron-builder install-app-deps",
+		"build:dev": "electron-builder --dir --config.developmentConfig",
 		"build:win": "npm run build && electron-builder --win --config",
 		"build:mac": "npm run build && electron-builder --mac --config",
 		"build:linux": "npm run build && electron-builder --linux --config",
@@ -26,6 +28,7 @@
 		"@electron-toolkit/preload": "^3.0.1",
 		"@electron-toolkit/utils": "^3.0.0",
 		"@tailwindcss/vite": "4.0.0-beta.5",
+		"electron-serve": "^2.1.1",
 		"electron-updater": "^6.3.9",
 		"tailwindcss": "4.0.0-beta.5"
 	},
@@ -34,7 +37,6 @@
 		"@electron/notarize": "^2.5.0",
 		"@fontsource/fira-mono": "^5.1.0",
 		"@neoconfetti/svelte": "^2.2.1",
-		"@sveltejs/adapter-auto": "^3.3.1",
 		"@sveltejs/adapter-static": "3.0.6",
 		"@sveltejs/kit": "^2.9.0",
 		"@sveltejs/vite-plugin-svelte": "^5.0.1",
@@ -57,6 +59,5 @@
 		"tslib": "^2.8.1",
 		"typescript": "^5.7.2",
 		"vite": "^6.0.3"
-	},
-	"type": "commonjs"
+	}
 }
