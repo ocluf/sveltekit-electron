@@ -6,10 +6,10 @@
 	 * to learn more about preload context, see https://www.electronjs.org/docs/latest/tutorial/tutorial-preload
 	 */
 	function logFromPreload() {
-		if (window.electron) {
-			window.electron.preload();
+		if (window.api) {
+			window.api.preload();
 		} else {
-			// you could implement alternative logic here if you deployed your app as website. For example call a rest api
+			console.warn('Line 12 - +page.svelte: Electron preload API not available');
 		}
 	}
 
@@ -17,11 +17,15 @@
 	 * logs from the main process. To see the logs, open Main Process logs in DevTools Console (F12)
 	 * to learn more about main process, see https://www.electronjs.org/docs/latest/api/context-bridge
 	 */
-	function logFromMain() {
-		if (window.electron) {
-			window.electron.main();
+	async function logFromMain() {
+		if (window.api) {
+			try {
+				await window.api.main();
+			} catch (error) {
+				console.error('Line 25 - +page.svelte: Error calling main process:', error);
+			}
 		} else {
-			// you could implement alternative logic here if you deployed your app as website. For example call a rest api
+			console.warn('Line 28 - +page.svelte: Electron main API not available');
 		}
 	}
 </script>

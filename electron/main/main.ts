@@ -72,7 +72,8 @@ async function main() {
 		});
 
 		ipcMain.handle('main-function', () => {
-			console.log('Function called from main context with main privileges');
+			console.log('Line 58 - main.ts: Function called from renderer process via IPC');
+			return Promise.resolve(); // Return a promise to properly handle async operation
 		});
 	} catch (error) {
 		console.error('Failed to initialize app:', error);
