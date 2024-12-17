@@ -45,7 +45,7 @@
 			</Card.Content>
 			<Card.Footer>
 				<span class="text-sm text-center opacity-75">
-					Check electron/preload/index.ts and DevTools Console <strong>(F12)</strong>
+					Check electron/preload/preload.ts and DevTools Console <strong>(F12)</strong>
 				</span>
 			</Card.Footer>
 		</Card.Root>
@@ -65,7 +65,7 @@
 			</Card.Content>
 			<Card.Footer>
 				<span class="text-sm text-center opacity-75">
-					Check electron/main/index.ts and Main Process logs
+					Check electron/main/main.ts and Main Process logs
 				</span>
 			</Card.Footer>
 		</Card.Root>

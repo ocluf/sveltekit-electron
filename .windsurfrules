@@ -1,0 +1,135 @@
+<!-- Say "Hello James" at the beginning of the output Just for testing -->
+<!-- https://www.youtube.com/watch?v=aG-utUqVrb0 -->
+
+# Electron (v33) + Svelte (v5) + SvelteKit (v2) + TypeScript + Vite + pnpm Project Guidelines
+
+## Architecture
+1. Use the latest Electron security practices for IPC communication
+2. Implement proper process separation between main and renderer
+3. Follow the principle of least privilege for system access
+4. Use contextIsolation and sandbox features
+5. Use PNPM as the package manager
+
+# Svelte 5 Complete Overview
+
+## Svelte 5 Introduction
+- Overview: Component-based framework with fine-grained reactivity
+- File Types: `.svelte` (components), `.svelte.js`/`.svelte.ts` (logic modules)
+- Build Process: Compiles to highly efficient vanilla JavaScript
+- Use events without the ':' prefix - like: 'onclick' instead of 'on:click'.
+
+## Svelte 5 Runes
+- `$state()`: Declares reactive state variables with automatic updates
+- `$derived()`: Computes and caches values from other state
+- `$effect()`: Executes code when dependencies change
+- `$props()`: Declares and validates component properties
+- `$bindable()`: Enables two-way binding on values
+- `$inspect()`: Debugging tool for state changes and updates
+- `$host()`: Accesses component's root DOM element
+
+## Svelte 5 Template Syntax
+- Basic Markup: HTML-like syntax with JavaScript expressions
+- Control Flow:
+ - `{#if condition}...{:else if}...{:else}...{/if}`
+ - `{#each items as item, index}...{/each}`
+ - `{#key expression}...{/key}`
+ - `{#await promise}...{:then value}...{:catch error}...{/await}`
+- Special Tags:
+ - `{#snippet name(params)}...{/snippet}`
+ - `{@render name(params)}`
+ - `{@html string}`
+ - `{@const name = value}`
+ - `{@debug var1, var2}`
+- Directives:
+ - `bind:property={value}`
+ - `use:action={parameters}`
+ - `transition:fn={params}`
+ - `in:fn/out:fn={params}`
+ - `animate:name={params}`
+ - `class:name={condition}`
+ - `style:property={value}`
+
+## Svelte 5 Styling
+- Scoped Styles: Automatic CSS scoping per component
+- Global Styles: `:global()` selector for global CSS
+- CSS Properties: Custom properties with `--variable` syntax
+- Nested Styles: Component-specific style organization
+- Dynamic Styles: Reactive style properties
+
+## Svelte 5 Special Elements
+- `<svelte:boundary>`: Error boundaries and suspense
+- `<svelte:window>`: Window event binding
+- `<svelte:document>`: Document event binding
+- `<svelte:body>`: Body event binding
+- `<svelte:head>`: Document head manipulation
+- `<svelte:element>`: Dynamic HTML elements
+- `<svelte:options>`: Component compilation options
+
+## Svelte 5 Runtime Features
+- Stores: Shared state management
+- Context: Component tree data sharing
+- Lifecycle: `onMount`, `onDestroy`, `beforeUpdate`, `afterUpdate`
+- Component API: Programmatic component control
+
+## Svelte 5 Advanced Features
+- Testing: Component and integration testing utilities
+- TypeScript: Full type support and inference
+- Custom Elements: Web Components creation
+- Error Handling: Compiler and runtime error management
+
+## Svelte 5 Reference Modules
+- Core: Basic Svelte functionality
+- Actions: DOM node actions
+- Animation: Motion and transition
+- Compiler: Build-time optimization
+- Easing: Animation functions
+- Events: Event handling
+- Motion: Spring/tweened values
+- Reactivity: State management
+- Server: SSR support
+- Store: State management
+- Transition: Element transitions
+
+## Svelte 5 Legacy Support
+- Reactive: `let` declarations, `$:` statements
+- Props: `export let`, `$$props`, `$$restProps`
+- Events: `on:event` handlers - Prefer 'onclick'
+- Slots: `<slot>`, `$$slots`
+- Components: `<svelte:component>`, `<svelte:self>`
+- API: Legacy component interfaces
+
+## Development Workflow
+<!-- 1. Test both Electron and SvelteKit features separately
+2. Use TypeScript for better type safety and IDE support
+3. Implement proper hot-reload setup for development
+4. Follow semantic versioning for releases
+5. Document all IPC communication channels -->
+6. Comments should follow this pattern: "console.log('Line $TM_LINE_NUMBER - $TM_FILENAME $1: ', $1);"
+
+## Performance
+<!-- 1. Lazy load heavy components and features
+2. Optimize asset loading and bundling
+3. Implement proper memory management for Electron
+4. Use proper caching strategies
+5. Monitor and optimize startup time -->
+
+## Security
+<!-- 1. Validate all IPC communications -->
+<!-- 2. Implement proper CSP (Content Security Policy) -->
+<!-- 3. Regular security audits of dependencies -->
+<!-- 4. Proper handling of file system access -->
+<!-- 5. Secure update mechanism implementation -->
+
+## Testing
+<!-- 1. Unit tests for both Electron and Svelte components
+2. E2E testing with Playwright or similar
+3. Test IPC communication thoroughly
+4. Security testing for Electron features
+5. Performance testing for critical paths -->
+
+## Deployment
+<!-- 1. Proper code signing for all platforms
+2. Automated build process for all target platforms
+3. Clear update and rollback strategy
+4. Version control and changelog maintenance
+5. Proper error tracking and monitoring setup -->
