@@ -1,7 +1,7 @@
 import { defineConfig, externalizeDepsPlugin } from 'electron-vite';
-// @ts-ignore
+// @ts-expect-error - SvelteKit types are not fully compatible with Vite config
 import { sveltekit } from '@sveltejs/kit/vite';
-// @ts-ignore
+// @ts-expect-error - TailwindCSS types are not fully compatible with Vite config
 import tailwindcss from '@tailwindcss/vite';
 import { resolve } from 'path';
 
@@ -12,7 +12,7 @@ const config = defineConfig({
 			outDir: 'out/electron/main',
 			lib: {
 				formats: ['es'],
-				entry: './electron/main/index.ts'
+				entry: './electron/main/main.ts'
 			}
 		}
 	},
@@ -22,7 +22,7 @@ const config = defineConfig({
 			outDir: 'out/electron/preload',
 			lib: {
 				formats: ['cjs'],
-				entry: './electron/preload/index.ts'
+				entry: './electron/preload/preload.ts'
 			}
 		}
 	},

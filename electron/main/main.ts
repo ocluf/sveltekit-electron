@@ -18,7 +18,7 @@ async function createWindow(): Promise<void> {
 		autoHideMenuBar: true,
 		...(process.platform === 'linux' ? { icon } : {}),
 		webPreferences: {
-			preload: join(__dirname, '../preload/index.cjs'),
+			preload: join(__dirname, '../preload/preload.cjs'),
 			sandbox: true,
 			contextIsolation: true
 		}
@@ -72,7 +72,8 @@ async function main() {
 		});
 
 		ipcMain.handle('main-function', () => {
-			console.log('Function called from main context with main privileges');
+			console.log('Line 58 - main.ts: Function called from renderer process via IPC');
+			return Promise.resolve(); // Return a promise to properly handle async operation
 		});
 	} catch (error) {
 		console.error('Failed to initialize app:', error);

@@ -12,3 +12,6 @@ out
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 /svelte-build
+
+# windsurf rules
+# .windsurfrules
