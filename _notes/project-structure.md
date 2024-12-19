@@ -9,6 +9,9 @@ ocluf_sveltekit-electron/
 │   │   └── main.ts         # Main process setup
 │   └── preload/
 │       └── preload.ts      # Preload script for IPC bridge
+├── plugins/
+│   ├── pluggable-electron  # Symlink to node_modules/pluggable-electron
+│   └── plugins.json        # Plugin configuration
 ├── src/
 │   ├── lib/
 │   │   ├── components/     # Reusable Svelte components

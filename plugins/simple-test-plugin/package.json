@@ -1,0 +1,16 @@
+{
+  "name": "simple-test-plugin",
+  "version": "1.0.0",
+  "description": "A simple test plugin for Pluggable Electron",
+  "main": "dist/simple-test-plugin.mjs",
+  "type": "module",
+  "scripts": {
+    "build": "vite build"
+  },
+  "activationPoints": ["init"],
+  "author": "Test Author",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^6.0.3"
+  }
+}

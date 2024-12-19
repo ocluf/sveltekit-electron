@@ -1,0 +1,21 @@
+{
+  "name": "demo-plugin-vue",
+  "version": "2.0.2",
+  "description": "",
+  "main": "dist/demo-plugin-vue.mjs",
+  "author": "Igor Honhoff",
+  "license": "MIT",
+  "activationPoints": [
+    "init"
+  ],
+  "scripts": {
+    "package": "vite build && rimraf ./demo-plugin-vue*.tgz && npm pack"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.9.3",
+    "@vue/compiler-sfc": "^3.2.19",
+    "rimraf": "^3.0.2",
+    "vite": "^2.6.3",
+    "vite-plugin-externals": "^0.3.0"
+  }
+}
